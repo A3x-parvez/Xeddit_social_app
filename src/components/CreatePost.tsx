@@ -48,18 +48,18 @@ export default function CreatePost({ onClose }: CreatePostProps) {
   };
 
   return (
-    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4 overflow-y-auto">
+    <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4 overflow-y-auto">
       <div className="min-h-screen py-8 w-full flex items-center justify-center">
         <form
           onSubmit={handleSubmit}
-          className="bg-white rounded-lg shadow-xl w-full max-w-2xl"
+          className="bg-gray-800 text-gray-100 rounded-lg shadow-xl w-full max-w-2xl"
         >
-          <div className="flex justify-between items-center p-4 border-b">
+          <div className="flex justify-between items-center p-4 border-b border-gray-700">
             <h2 className="text-xl font-semibold">Create Post</h2>
             <button
               type="button"
               onClick={onClose}
-              className="text-gray-500 hover:text-gray-700"
+              className="text-gray-400 hover:text-gray-200"
             >
               <X className="w-5 h-5" />
             </button>
@@ -72,7 +72,7 @@ export default function CreatePost({ onClose }: CreatePostProps) {
                 alt={user.username}
                 className="w-10 h-10 rounded-full object-cover"
               />
-              <span className="font-medium text-gray-700">{user.username}</span>
+              <span className="font-medium">{user.username}</span>
             </div>
 
             <input
@@ -80,7 +80,7 @@ export default function CreatePost({ onClose }: CreatePostProps) {
               value={title}
               onChange={(e) => setTitle(e.target.value)}
               placeholder="Title"
-              className="w-full mb-4 p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
+              className="w-full mb-4 p-2 border border-gray-700 rounded-md bg-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500"
               required
             />
 
@@ -88,7 +88,7 @@ export default function CreatePost({ onClose }: CreatePostProps) {
               value={content}
               onChange={(e) => setContent(e.target.value)}
               placeholder="What's on your mind?"
-              className="w-full h-32 mb-4 p-2 border rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-orange-500"
+              className="w-full h-32 mb-4 p-2 border border-gray-700 rounded-md bg-gray-700 placeholder-gray-400 resize-none focus:outline-none focus:ring-2 focus:ring-orange-500"
               required
             />
 
@@ -113,7 +113,7 @@ export default function CreatePost({ onClose }: CreatePostProps) {
                     setMediaUrl('');
                     setMediaType(undefined);
                   }}
-                  className="absolute top-2 right-2 p-1 bg-gray-800/50 rounded-full text-white hover:bg-gray-800"
+                  className="absolute top-2 right-2 p-1 bg-gray-800/70 rounded-full text-white hover:bg-gray-900"
                 >
                   <X className="w-4 h-4" />
                 </button>
@@ -132,10 +132,10 @@ export default function CreatePost({ onClose }: CreatePostProps) {
                 <button
                   type="button"
                   onClick={() => fileInputRef.current?.click()}
-                  className="flex items-center space-x-2 px-4 py-2 border rounded-md hover:bg-gray-50 transition-colors"
+                  className="flex items-center space-x-2 px-4 py-2 border border-gray-700 rounded-md bg-gray-700 hover:bg-gray-600 transition-colors"
                 >
-                  <ImagePlus className="w-5 h-5" />
-                  <span>Add Media</span>
+                  <ImagePlus className="w-5 h-5 text-gray-300" />
+                  <span className="text-gray-300">Add Media</span>
                 </button>
               </div>
 

@@ -30,12 +30,12 @@ export default function App() {
       <div className="min-h-screen bg-black">
         <Header />
         <main className="max-w-2xl mx-auto px-4 py-8">
-          <button
+          {/* <button
             onClick={() => setShowCreatePost(true)}
             className="w-full mb-6 bg-orange-500 text-white py-3 px-4 rounded-md hover:bg-orange-600 transition-colors focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 flex items-center justify-center space-x-2"
           >
             <span>Create Post</span>
-          </button>
+          </button> */}
           
           {showCreatePost && <CreatePost onClose={() => setShowCreatePost(false)} />}
           
